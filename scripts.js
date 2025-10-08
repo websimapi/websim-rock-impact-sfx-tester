@@ -10,6 +10,18 @@ const sounds = [
   {id:'sfx8', title:'Crack and Roll', file:'sfx8.mp3', desc:'Initial crack on impact then a brief rolling tumble of stones. 2.0s'},
   {id:'sfx9', title:'Distant Thud Through Soil', file:'sfx9.mp3', desc:'Muffled, distant heavy thud as if underground impact. 1.6s'},
   {id:'sfx10', title:'Fragile Slate Snap', file:'sfx10.mp3', desc:'Thin slate-like piece snapping and small debris scatter. 1.1s'},
+
+  // 10 additional closely related variants (reuse existing files for quick testing)
+  {id:'sfx11', title:'Large Rock > Loose Soil (Deep)', file:'sfx1.mp3', desc:'Variant: heavier take with deeper emphasis, useful for big drops. 1.6s'},
+  {id:'sfx12', title:'Rock Against Pebble Cluster', file:'sfx2.mp3', desc:'Variant: more metallic high transient + small ricochets. 1.2s'},
+  {id:'sfx13', title:'Tiny Pebble Burst', file:'sfx3.mp3', desc:'Variant: faster, brighter pebbles for granular impacts. 1.0s'},
+  {id:'sfx14', title:'Dense Slab Hit', file:'sfx4.mp3', desc:'Variant: heavier low-end focus from dense granite impacts. 1.8s'},
+  {id:'sfx15', title:'Sandy Hollow Thud', file:'sfx5.mp3', desc:'Variant: more sand hiss and muted mid frequencies. 1.4s'},
+  {id:'sfx16', title:'Thin Edge Snap + Scratch', file:'sfx6.mp3', desc:'Variant: slightly longer scrape into the hit for sharp textures. 0.9s'},
+  {id:'sfx17', title:'Canyon Reflection (Warm)', file:'sfx7.mp3', desc:'Variant: warmer canyon tail with a touch more ambience. 2.2s'},
+  {id:'sfx18', title:'Cascade Roll Extended', file:'sfx8.mp3', desc:'Variant: emphasizes the rolling taps after the crack. 2.0s'},
+  {id:'sfx19', title:'Buried Thud (Muffled)', file:'sfx9.mp3', desc:'Variant: further damped, useful for subterranean impacts. 1.6s'},
+  {id:'sfx20', title:'Slate Shatter Small Debris', file:'sfx10.mp3', desc:'Variant: sharper snap with more high-frequency debris. 1.1s'},
 ];
 
 const list = document.getElementById('sfx-list');
@@ -102,4 +114,3 @@ for(const s of sounds){
   list.appendChild(createItem(s));
 }
 /* ...existing code... */
-
