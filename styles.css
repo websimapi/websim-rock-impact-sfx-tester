@@ -47,5 +47,5 @@ h1{margin:0 0 8px 0;font-size:20px}
   cursor:pointer;
 }
 .btn:active{transform:translateY(1px)}
+.btn.download { border-color:#cfd; }
 .controls{margin-top:12px;text-align:right}
-

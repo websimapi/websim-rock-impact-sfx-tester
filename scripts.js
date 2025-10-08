@@ -56,8 +56,38 @@ function createItem(s){
     stopSound(s.id);
   });
 
+  // Download button
+  const dlBtn = document.createElement('button');
+  dlBtn.className = 'btn download';
+  dlBtn.textContent = 'Download';
+  dlBtn.addEventListener('click', async (e)=>{
+    e.stopPropagation();
+    try {
+      dlBtn.disabled = true;
+      dlBtn.textContent = 'Downloading...';
+      const res = await fetch(s.file);
+      if(!res.ok) throw new Error('Network error');
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = s.file;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    } catch(err){
+      console.error('Download failed', err);
+      alert('Download failed');
+    } finally {
+      dlBtn.disabled = false;
+      dlBtn.textContent = 'Download';
+    }
+  });
+
   controls.appendChild(playBtn);
   controls.appendChild(stopBtn);
+  controls.appendChild(dlBtn);
 
   li.appendChild(meta);
   li.appendChild(controls);
