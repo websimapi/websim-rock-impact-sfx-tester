@@ -1,0 +1,51 @@
+:root{
+  --bg:#fff;
+  --fg:#111;
+  --muted:#556;
+  --accent:#0b5;
+  font-family: "Noto Sans", system-ui, Arial, sans-serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  padding:48px;
+}
+main{
+  width:760px;
+  max-width:95vw;
+}
+h1{margin:0 0 8px 0;font-size:20px}
+.note{margin:0 0 16px 0;color:var(--muted);font-size:13px}
+.sfx-list{list-style:none;padding:0;margin:0;border:1px solid #e6e6e6;border-radius:8px;overflow:hidden}
+.sfx-item{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  padding:12px 14px;
+  border-bottom:1px solid #f2f2f2;
+  cursor:pointer;
+  user-select:none;
+}
+.sfx-item:last-child{border-bottom:0}
+.sfx-item:hover{background:#fafafa}
+.sfx-meta{flex:1}
+.sfx-title{font-weight:600}
+.sfx-desc{font-size:12px;color:var(--muted)}
+.sfx-controls{display:flex;gap:8px;align-items:center}
+.btn{
+  border:1px solid #ddd;
+  background:#fff;
+  padding:6px 8px;
+  border-radius:6px;
+  font-size:13px;
+  cursor:pointer;
+}
+.btn:active{transform:translateY(1px)}
+.controls{margin-top:12px;text-align:right}
+
